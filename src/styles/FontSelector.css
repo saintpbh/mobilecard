@@ -1,0 +1,380 @@
+.font-selector {
+  margin-bottom: 1.5rem;
+}
+
+.font-selector-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.font-selector-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.font-selector-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background: white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.font-selector-toggle:hover {
+  border-color: #9ca3af;
+  background: #f9fafb;
+}
+
+.chevron {
+  transition: transform 0.2s ease;
+}
+
+.chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.font-preview {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: white;
+  margin-bottom: 0.5rem;
+}
+
+.preview-text {
+  margin-bottom: 0.5rem;
+  color: #374151;
+  word-break: break-all;
+}
+
+.font-info {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.font-weight,
+.font-style,
+.font-align {
+  background: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+.font-settings-panel {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.setting-section {
+  margin-bottom: 1.5rem;
+}
+
+.setting-section:last-child {
+  margin-bottom: 0;
+}
+
+.setting-section h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.font-family-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.font-option {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background: white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.font-option:hover {
+  border-color: #9ca3af;
+  background: #f9fafb;
+}
+
+.font-option.active {
+  border-color: #3b82f6;
+  background: #3b82f6;
+  color: white;
+}
+
+.font-size-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.font-size-slider {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: #e5e7eb;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.font-size-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.font-size-slider::-webkit-slider-thumb:hover {
+  background: #2563eb;
+}
+
+.font-size-input {
+  width: 60px;
+  padding: 0.375rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.font-size-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.font-size-unit {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.font-weight-options,
+.font-style-options,
+.font-align-options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.weight-btn,
+.style-btn,
+.align-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background: white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.weight-btn:hover,
+.style-btn:hover,
+.align-btn:hover {
+  border-color: #9ca3af;
+  background: #f9fafb;
+}
+
+.weight-btn.active,
+.style-btn.active,
+.align-btn.active {
+  border-color: #3b82f6;
+  background: #3b82f6;
+  color: white;
+}
+
+.quick-size-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.quick-size-btn {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background: white;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.quick-size-btn:hover {
+  border-color: #9ca3af;
+  background: #f9fafb;
+}
+
+.quick-size-btn.active {
+  border-color: #3b82f6;
+  background: #3b82f6;
+  color: white;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .font-family-selector {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  
+  .font-size-control {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .font-weight-options,
+  .font-style-options,
+  .font-align-options {
+    justify-content: center;
+  }
+  
+  .quick-size-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .font-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* 애니메이션 */
+.font-settings-panel {
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 스크롤바 스타일 */
+.font-family-selector::-webkit-scrollbar {
+  width: 6px;
+}
+
+.font-family-selector::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.font-family-selector::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.font-family-selector::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* 접근성 */
+.font-selector-toggle:focus,
+.font-option:focus,
+.weight-btn:focus,
+.style-btn:focus,
+.align-btn:focus,
+.quick-size-btn:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.font-selector-toggle:focus:not(:focus-visible),
+.font-option:focus:not(:focus-visible),
+.weight-btn:focus:not(:focus-visible),
+.style-btn:focus:not(:focus-visible),
+.align-btn:focus:not(:focus-visible),
+.quick-size-btn:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .font-selector-toggle {
+    background: #374151;
+    border-color: #4b5563;
+    color: #d1d5db;
+  }
+  
+  .font-selector-toggle:hover {
+    background: #4b5563;
+    border-color: #6b7280;
+  }
+  
+  .font-preview {
+    background: #374151;
+    border-color: #4b5563;
+  }
+  
+  .preview-text {
+    color: #d1d5db;
+  }
+  
+  .font-settings-panel {
+    background: #374151;
+    border-color: #4b5563;
+  }
+  
+  .font-option,
+  .weight-btn,
+  .style-btn,
+  .align-btn,
+  .quick-size-btn {
+    background: #374151;
+    border-color: #4b5563;
+    color: #d1d5db;
+  }
+  
+  .font-option:hover,
+  .weight-btn:hover,
+  .style-btn:hover,
+  .align-btn:hover,
+  .quick-size-btn:hover {
+    background: #4b5563;
+    border-color: #6b7280;
+  }
+  
+  .font-size-input {
+    background: #374151;
+    border-color: #4b5563;
+    color: #d1d5db;
+  }
+  
+  .font-weight,
+  .font-style,
+  .font-align {
+    background: #4b5563;
+    color: #d1d5db;
+  }
+}
+
